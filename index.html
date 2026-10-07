@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Camp 2027 — Зимний семейный лагерь на курорте Яхорина (Босния)</title>
+  <meta name="description" content="Уютный семейный горнолыжный лагерь для русскоговорящих семей с детьми 5-13 лет. Олимпийский курорт Яхорина (Босния и Герцеговина), 7–14 февраля 2027.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              indigo: '#5654D4',
+              'indigo-dark': '#4341B2',
+              coral: '#FF6B4A',
+              'coral-hover': '#FA5530',
+              azure: '#38BDF8',
+              'azure-dark': '#0284C7',
+              snow: '#F8FAFC',
+              slate: '#0F172A',
+            }
+          },
+          boxShadow: {
+            'glow-coral': '0 10px 25px -5px rgba(255, 107, 74, 0.45)',
+            'glow-indigo': '0 10px 25px -5px rgba(86, 84, 212, 0.35)',
+            'soft-card': '0 12px 35px -8px rgba(15, 23, 42, 0.08)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @keyframes pulseGlow {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 74, 0.6), 0 10px 25px -5px rgba(255, 107, 74, 0.45);
+      }
+      50% {
+        box-shadow: 0 0 0 14px rgba(255, 107, 74, 0), 0 15px 30px -5px rgba(255, 107, 74, 0.6);
+      }
+    }
+    .pulse-btn {
+      animation: pulseGlow 2.8s infinite cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    .faq-answer {
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-brand-slate font-sans antialiased overflow-x-hidden selection:bg-brand-coral selection:text-white">
+
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-slate-100/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo Image Placeholder -->
+        <a href="#hero" class="flex items-center group focus:outline-none" aria-label="Family Camp Logo">
+          <div class="relative flex items-center justify-center h-12 max-w-[220px] transition-transform duration-300 group-hover:scale-105">
+            <img src="https://i.postimg.cc/W4xZmZMx/Snimok.png" 
+                 alt="Family Camp Logo" 
+                 class="h-11 sm:h-12 w-auto max-w-full object-contain rounded-lg"
+                 onerror="this.src='https://placehold.co/200x50/5654D4/ffffff?text=FAMILY+CAMP'">
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-7 lg:gap-9 text-[15px] font-medium text-slate-700">
+          <a href="#about" class="hover:text-brand-indigo transition-colors">О лагере</a>
+          <a href="#lodging" class="hover:text-brand-indigo transition-colors">Проживание</a>
+          <a href="#meals" class="hover:text-brand-indigo transition-colors">Питание</a>
+          <a href="#faq" class="hover:text-brand-indigo transition-colors">Программа & FAQ</a>
+          <a href="#booking" class="hover:text-brand-indigo transition-colors">Забронировать</a>
+        </nav>
+
+        <!-- CTA in Header -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="https://forms.gle/jGzSs5m5NUqApjhK8" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-brand-coral hover:bg-brand-coral-hover shadow-md shadow-brand-coral/25 hover:-translate-y-0.5 transition-all duration-200">
+            Подать заявку
+            <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" type="button" aria-label="Открыть меню" class="md:hidden p-2 rounded-xl text-slate-600 hover:text-brand-indigo hover:bg-slate-100 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="menu-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 pt-3 pb-6 shadow-xl transition-all">
+      <div class="flex flex-col space-y-3 font-medium text-base text-slate-700">
+        <a href="#about" class="mobile-link py-2 border-b border-slate-100 hover:text-brand-indigo">О лагере</a>
+        <a href="#lodging" class="mobile-link py-2 border-b border-slate-100 hover:text-brand-indigo">Проживание</a>
+        <a href="#meals" class="mobile-link py-2 border-b border-slate-100 hover:text-brand-indigo">Питание</a>
+        <a href="#faq" class="mobile-link py-2 border-b border-slate-100 hover:text-brand-indigo">Программа & FAQ</a>
+        <a href="#booking" class="mobile-link py-2 border-b border-slate-100 hover:text-brand-indigo">Забронировать</a>
+        <a href="https://forms.gle/jGzSs5m5NUqApjhK8" target="_blank" rel="noopener noreferrer" class="mobile-link inline-flex items-center justify-center w-full px-5 py-3 mt-2 rounded-xl text-center font-bold text-white bg-brand-coral hover:bg-brand-coral-hover shadow-md">
+          Подать заявку в Google Forms
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="relative min-h-[92vh] flex items-center pt-28 pb-20 md:py-36 overflow-hidden">
+      <!-- Background Image (Загруженное фото склонов и гор Яхорины) -->
+      <div class="absolute inset-0 z-0">
+        <img src="https://i.postimg.cc/gxTNs7kJ/image.jpg" 
+             alt="Семейный лагерь на горнолыжном курорте Яхорина" 
+             class="w-full h-full object-cover object-center"
+             onerror="this.onerror=null; this.src='https://i.postimg.cc/gxTNs7kJ/image.png';">
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-900/60 to-slate-900/35"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+        <div class="max-w-3xl">
+          
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-xs sm:text-sm font-semibold text-brand-azure mb-6 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-brand-azure animate-ping"></span>
+            <span>7–14 февраля 2027 • Яхорина, Босния и Герцеговина • Возраст 5+</span>
+          </div>
+
+          <!-- Main H1 -->
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] mb-6 text-white">
+            Зимний семейный лагерь на горнолыжных склонах <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-sky-200 to-indigo-200">Яхорины</span>
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="text-lg sm:text-xl text-slate-200 leading-relaxed font-normal mb-8 max-w-2xl">
+            Неделя настоящего горного отдыха: уютный гостевой дом прямо у склона, домашнее питание, лыжи для всей семьи и душевные творческие вечера в кругу близких по духу людей.
+          </p>
+
+          <!-- Buttons Group -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5">
+            <a href="https://forms.gle/jGzSs5m5NUqApjhK8" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="pulse-btn inline-flex items-center justify-center px-8 py-4 rounded-full text-base sm:text-lg font-bold text-white bg-brand-coral hover:bg-brand-coral-hover transition-all duration-300 text-center">
+              Оставить заявку на участие
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+
+            <a href="#about" 
+               class="inline-flex items-center justify-center px-7 py-4 rounded-full text-base font-semibold text-white bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 transition-all duration-200 text-center">
+              Узнать подробности
+            </a>
+          </div>
+
+          <!-- Social Proof / Highlight -->
+          <div class="mt-10 pt-6 border-t border-white/15 flex flex-wrap items-center gap-6 text-xs sm:text-sm text-slate-300">
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-brand-azure" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Всего 10 номеров — уютный мини-формат</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-brand-azure" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Ski-to-door (50 м до трассы)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-brand-azure" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Полный пансион домашней кухни</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-20 md:py-28 bg-brand-snow relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+          
+          <!-- Left Content Column -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-indigo bg-brand-indigo/10 px-3 py-1 rounded-full">
+              Концепция и формат
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+              Уютный зимний выезд <br class="hidden sm:inline">без суеты и перегрузок
+            </h2>
+            <p class="text-lg text-slate-600 leading-relaxed">
+              Зимний семейный лагерь в Боснии — это формат, где отдыхают и дети, и родители. Уютный мини-отель рядом с горнолыжной трассой, домашняя еда прямо в отеле, теплые семейные вечера в творческой и душевной атмосфере, доступные цены без альпийских наценок.
+            </p>
+
+            <!-- Quick Facts Badges Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+              
+              <!-- Fact 1 -->
+              <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-soft-card flex items-start gap-3.5 hover:border-brand-indigo/40 transition-colors">
+                <div class="w-10 h-10 rounded-xl bg-indigo-50 text-brand-indigo flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="block text-xs uppercase font-bold text-slate-400">Даты смены</span>
+                  <span class="font-bold text-slate-800 text-sm sm:text-base">7–14 февраля 2027</span>
+                </div>
+              </div>
+
+              <!-- Fact 2 -->
+              <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-soft-card flex items-start gap-3.5 hover:border-brand-indigo/40 transition-colors">
+                <div class="w-10 h-10 rounded-xl bg-indigo-50 text-brand-indigo flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="block text-xs uppercase font-bold text-slate-400">Локация</span>
+                  <span class="font-bold text-slate-800 text-sm sm:text-base">Jahorina, RS/BiH</span>
+                </div>
+              </div>
+
+              <!-- Fact 3 -->
+              <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-soft-card flex items-start gap-3.5 hover:border-brand-indigo/40 transition-colors">
+                <div class="w-10 h-10 rounded-xl bg-orange-50 text-brand-coral flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="block text-xs uppercase font-bold text-slate-400">Возраст детей</span>
+                  <span class="font-bold text-slate-800 text-sm sm:text-base">5+</span>
+                </div>
+              </div>
+
+              <!-- Fact 4 -->
+              <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-soft-card flex items-start gap-3.5 hover:border-brand-indigo/40 transition-colors">
+                <div class="w-10 h-10 rounded-xl bg-sky-50 text-brand-azure-dark flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="block text-xs uppercase font-bold text-slate-400">Доступ к склону</span>
+                  <span class="font-bold text-slate-800 text-sm sm:text-base">Ski-to-door access (50 м)</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right Image Column (Placeholder for real photo) -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              <!-- Background Decorative Blobs -->
+              <div class="absolute -top-4 -left-4 w-72 h-72 bg-brand-indigo/15 rounded-full blur-3xl pointer-events-none"></div>
+              <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-brand-coral/15 rounded-full blur-3xl pointer-events-none"></div>
+
+              <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-800">
+                <img src="https://i.postimg.cc/Hs9296vX/Chat-GPT-Image-Oct-7-2026-04-45-35-PM.png" 
+                     alt="Семья на горнолыжном курорте Яхорина" 
+                     class="w-full h-[480px] object-cover object-center transform hover:scale-105 transition-transform duration-700"
+                     onerror="this.src='https://placehold.co/800x960/1e293b/ffffff?text=FAMILY+PHOTO';">
+                <div class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent text-white">
+                  <p class="font-bold text-lg">Катание и дружба</p>
+                  <p class="text-xs text-slate-200">Пока взрослые катаются по олимпийским трассам, дети развивают навыки и заводят лучших друзей.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="py-20 md:py-24 bg-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-coral bg-orange-50 px-3 py-1 rounded-full mb-3">
+            Наши воспоминания
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Как это было: наши прошлые семейные смены
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-600">
+            Живые эмоции, дружба, искренние улыбки и впечатления, которые остаются с детьми на всю жизнь.
+          </p>
+        </div>
+
+        <!-- 5-Photo Atmospheric Mosaic Gallery -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 sm:gap-6">
+          
+          <!-- Photo 1: Big Feature (Kids in Snow) -->
+          <div class="sm:col-span-2 lg:col-span-7 group relative h-72 sm:h-96 rounded-2xl overflow-hidden shadow-soft-card bg-slate-800">
+            <img src="https://i.postimg.cc/NFWW8pNB/IMG-5225.jpg" 
+                 alt="Дети играют в снегу" 
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                 onerror="this.src='https://placehold.co/1200x800/1e293b/ffffff?text=PHOTO+1+PLACEHOLDER'">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-85 group-hover:opacity-95 transition-opacity"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <span class="inline-block px-2.5 py-1 bg-brand-coral text-white text-[11px] font-bold rounded-md mb-1.5">Эмоции</span>
+              <p class="font-bold text-base sm:text-lg">Веселые снежные битвы и командные квесты</p>
+            </div>
+          </div>
+
+          <!-- Photo 2: Board games fireplace -->
+          <div class="sm:col-span-1 lg:col-span-5 group relative h-72 sm:h-96 rounded-2xl overflow-hidden shadow-soft-card bg-slate-800">
+            <img src="https://i.postimg.cc/9Q4BHcFf/foto-2.png" 
+                 alt="Настольные игры в теплом кругу" 
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                 onerror="this.src='https://placehold.co/800x800/1e293b/ffffff?text=PHOTO+2+PLACEHOLDER'">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-85 group-hover:opacity-95 transition-opacity"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <span class="inline-block px-2.5 py-1 bg-brand-indigo text-white text-[11px] font-bold rounded-md mb-1.5">Уют</span>
+              <p class="font-bold text-base">Настольные игры в теплом кругу</p>
+            </div>
+          </div>
+
+          <!-- Photo 3: Ski lessons for children -->
+          <div class="sm:col-span-1 lg:col-span-4 group relative h-64 sm:h-72 rounded-2xl overflow-hidden shadow-soft-card bg-slate-800">
+            <img src="https://i.postimg.cc/k4DJfYy9/foto-3.png" 
+                 alt="Первые шаги на горных лыжах" 
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                 onerror="this.src='https://placehold.co/800x600/1e293b/ffffff?text=PHOTO+3+PLACEHOLDER'">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-85 group-hover:opacity-95 transition-opacity"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <p class="font-bold text-sm">Первые шаги на горных лыжах</p>
+            </div>
+          </div>
+
+          <!-- Photo 4: Evening workshops & creative studio -->
+          <div class="sm:col-span-1 lg:col-span-4 group relative h-64 sm:h-72 rounded-2xl overflow-hidden shadow-soft-card bg-slate-800">
+            <img src="https://i.postimg.cc/Jn9sJWWL/foto-4.jpg" 
+                 alt="Творческие мастер-классы и квесты" 
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                 onerror="this.src='https://placehold.co/800x600/1e293b/ffffff?text=PHOTO+4+PLACEHOLDER'">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-85 group-hover:opacity-95 transition-opacity"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <p class="font-bold text-sm">Творческие мастер-классы и квесты</p>
+            </div>
+          </div>
+
+          <!-- Photo 5: Mountain panoramas and family sunset -->
+          <div class="sm:col-span-1 lg:col-span-4 group relative h-64 sm:h-72 rounded-2xl overflow-hidden shadow-soft-card bg-slate-800">
+            <img src="https://i.postimg.cc/htPtXG7j/foto-5.jpg" 
+                 alt="Солнце и панорамы олимпийских вершин" 
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                 onerror="this.src='https://placehold.co/800x600/1e293b/ffffff?text=PHOTO+5+PLACEHOLDER'">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-85 group-hover:opacity-95 transition-opacity"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <p class="font-bold text-sm">Солнце и панорамы олимпийских вершин</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Instagram Past Camp Link Banner -->
+        <div class="mt-10 p-6 rounded-2xl bg-gradient-to-r from-brand-indigo/10 via-sky-50 to-orange-50 border border-slate-200/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3.5 text-center sm:text-left">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white flex items-center justify-center shrink-0 shadow-md">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="font-bold text-slate-800 text-sm sm:text-base">Смотрите видео и атмосферу прошлых смен</p>
+              <p class="text-xs sm:text-sm text-slate-500">Фотоотчеты, истории и отзывы родителей в нашем профиле Instagram</p>
+            </div>
+          </div>
+          <a href="https://www.instagram.com/familycampcyprus/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="inline-flex items-center px-5 py-2.5 rounded-full text-sm font-semibold text-brand-indigo bg-white hover:bg-brand-indigo hover:text-white border border-brand-indigo/30 shadow-sm transition-all duration-200 shrink-0">
+            Перейти в @familycampcyprus
+            <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="lodging" class="py-20 md:py-28 bg-slate-50 border-y border-slate-200/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Top Section Content -->
+        <div class="max-w-3xl mb-12">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-indigo bg-brand-indigo/10 px-3 py-1 rounded-full mb-3">
+            Наш горный дом
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Проживание: домашний уют в 50 метрах от склона
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+            Мы размещаемся в уютном 3-звездочном гостевом доме на горнолыжном курорте Яхорина. Локация идеальна для отдыха с детьми: всего 200 метров от главного подъемника «Пољице» и 50 метров от горнолыжного склона (формат ski-to-door access).
+          </p>
+        </div>
+
+        <!-- Amenities Chips Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+          
+          <div class="p-4 rounded-2xl bg-white border border-slate-200/70 shadow-sm flex items-start gap-3">
+            <div class="w-9 h-9 rounded-lg bg-indigo-50 text-brand-indigo flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            </div>
+            <div>
+              <p class="font-bold text-slate-800 text-sm">Большой общий зал</p>
+              <p class="text-xs text-slate-500">Для совместных посиделок, игр, мастер-классов и вкусных трапез</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white border border-slate-200/70 shadow-sm flex items-start gap-3">
+            <div class="w-9 h-9 rounded-lg bg-sky-50 text-brand-azure-dark flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+            </div>
+            <div>
+              <p class="font-bold text-slate-800 text-sm">Собственный Ski-room</p>
+              <p class="text-xs text-slate-500">Безопасное хранение инвентаря</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white border border-slate-200/70 shadow-sm flex items-start gap-3">
+            <div class="w-9 h-9 rounded-lg bg-orange-50 text-brand-coral flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <div>
+              <p class="font-bold text-slate-800 text-sm">Прокат и лыжная школа</p>
+              <p class="text-xs text-slate-500">Подбор снаряжения и заказ инструкторов прямо на месте без очередей</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white border border-slate-200/70 shadow-sm flex items-start gap-3">
+            <div class="w-9 h-9 rounded-lg bg-indigo-50 text-brand-indigo flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div>
+              <p class="font-bold text-slate-800 text-sm">Бесплатная парковка</p>
+              <p class="text-xs text-slate-500">Удобно для тех, кто приезжает на автомобиле из Европы или Сербии</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white border border-slate-200/70 shadow-sm flex items-start gap-3">
+            <div class="w-9 h-9 rounded-lg bg-sky-50 text-brand-azure-dark flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/></svg>
+            </div>
+            <div>
+              <p class="font-bold text-slate-800 text-sm">Высокоскоростной Wi-Fi</p>
+              <p class="text-xs text-slate-500">Стабильный интернет по всему дому для работы и общения</p>
+            </div>
+          </div>
+
+          <!-- Highlight Accent Card: Room Stock -->
+          <div class="p-4 rounded-2xl bg-gradient-to-br from-brand-indigo to-indigo-700 text-white shadow-soft-card flex items-start gap-3">
+            <div class="w-9 h-9 rounded-lg bg-white/20 text-white flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            </div>
+            <div>
+              <p class="font-bold text-sm">Всего 10 номеров в доме</p>
+              <p class="text-xs text-indigo-100">2 двухместных, 4 трехместных и 4 четырехместных номера. Камерно и только для своих!</p>
+            </div>
+          </div>
+
+        </div>
+
+        <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+          <span>Фотогалерея гостевого дома</span>
+          <span class="text-xs font-normal text-slate-500">(нажмите для приближения)</span>
+        </h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Photo 1: Chalet exterior -->
+          <div class="group bg-white rounded-2xl overflow-hidden shadow-soft-card border border-slate-200/60 hover:-translate-y-1 transition-all duration-300">
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://i.postimg.cc/k4D1jzh5/dom-foto-1.jpg" 
+                   alt="Гостевой дом" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.src='https://images.unsplash.com/photo-1548777123-e216912df7d8?auto=format&fit=crop&w=800&q=80'">
+            </div>
+            <div class="p-4">
+              <h4 class="font-bold text-slate-800 text-sm">Гостевой дом</h4>
+              <p class="text-xs text-slate-500 mt-1">Всего в 50 метрах от трассы для начинающих</p>
+            </div>
+          </div>
+
+          <!-- Photo 2: Double Room -->
+          <div class="group bg-white rounded-2xl overflow-hidden shadow-soft-card border border-slate-200/60 hover:-translate-y-1 transition-all duration-300">
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://i.postimg.cc/SKRfq8LD/dom-foto-2.jpg" 
+                   alt="Двухместный номер" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.src='https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80'">
+            </div>
+            <div class="p-4">
+              <h4 class="font-bold text-slate-800 text-sm">Двухместный номер</h4>
+              <p class="text-xs text-slate-500 mt-1">Уютный номер для родителя с ребенком или пары</p>
+            </div>
+          </div>
+
+          <!-- Photo 3: Family Room -->
+          <div class="group bg-white rounded-2xl overflow-hidden shadow-soft-card border border-slate-200/60 hover:-translate-y-1 transition-all duration-300">
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://i.postimg.cc/j2tWqY0d/dom-foto-5.jpg" 
+                   alt="Просторный семейный номер" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.src='https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=800&q=80'">
+            </div>
+            <div class="p-4">
+              <h4 class="font-bold text-slate-800 text-sm">Просторный семейный номер</h4>
+              <p class="text-xs text-slate-500 mt-1">4-5 спальных мест с удобными матрасами и мини-кухней</p>
+            </div>
+          </div>
+
+          <!-- Photo 4: Three-bed room -->
+          <div class="group bg-white rounded-2xl overflow-hidden shadow-soft-card border border-slate-200/60 hover:-translate-y-1 transition-all duration-300">
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://i.postimg.cc/v8thrQmk/dom-foto-3.jpg" 
+                   alt="Трех-местный номер" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.src='https://placehold.co/800x600/1e293b/ffffff?text=3-BED+ROOM';">
+            </div>
+            <div class="p-4">
+              <h4 class="font-bold text-slate-800 text-sm">Трех-местный номер</h4>
+              <p class="text-xs text-slate-500 mt-1">Для родителей и 1 ребенка</p>
+            </div>
+          </div>
+
+          <!-- Photo 5: Four-bed room -->
+          <div class="group bg-white rounded-2xl overflow-hidden shadow-soft-card border border-slate-200/60 hover:-translate-y-1 transition-all duration-300">
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://i.postimg.cc/dQ5dQD14/dom-foto-4.jpg" 
+                   alt="Четырехместный номер" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.src='https://placehold.co/800x600/1e293b/ffffff?text=4-BED+ROOM';">
+            </div>
+            <div class="p-4">
+              <h4 class="font-bold text-slate-800 text-sm">Четырехместный номер</h4>
+              <p class="text-xs text-slate-500 mt-1">Уютное размещение для родителей с 2 детьми</p>
+            </div>
+          </div>
+
+          <!-- Photo 6: Shared lounge (Moved to last position) -->
+          <div class="group bg-white rounded-2xl overflow-hidden shadow-soft-card border border-slate-200/60 hover:-translate-y-1 transition-all duration-300">
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://i.postimg.cc/SKQkKQjG/dom-foto-6.jpg" 
+                   alt="Общая гостиная" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.src='https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80'">
+            </div>
+            <div class="p-4">
+              <h4 class="font-bold text-slate-800 text-sm">Общая гостиная</h4>
+              <p class="text-xs text-slate-500 mt-1">Место для мастерских, вечернего чая и душевных бесед</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="meals" class="py-20 md:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+          
+          <!-- Left Column: Content -->
+          <div class="lg:col-span-6 space-y-6">
+            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-coral bg-orange-50 px-3 py-1 rounded-full">
+              Забота и тепло
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+              Питание: как дома, вкусно и с заботой
+            </h2>
+            <p class="text-lg text-slate-600 leading-relaxed">
+              В стоимость лагеря уже включено полноценное домашнее питание: полный пансион прямо в гостевом доме. Меню сытное, детское и понятное: ароматные каши, согревающие супы, тушеное мясо, настоящий плов, свежие салаты и выпечка.
+            </p>
+
+            <!-- Features of Food -->
+            <div class="space-y-3.5 pt-2">
+              
+              <div class="flex items-center gap-3">
+                <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </div>
+                <span class="text-slate-700 text-sm sm:text-base font-medium">Полноценный 3-разовый домашний рацион + вечерние чаепития</span>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </div>
+                <span class="text-slate-700 text-sm sm:text-base font-medium">Учет индивидуальных пожеланий и детских пищевых аллергий</span>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </div>
+                <span class="text-slate-700 text-sm sm:text-base font-medium">Всегда горячий чай, какао, орешки, сухофрукты и свежие фрукты в зале</span>
+              </div>
+
+            </div>
+
+            <!-- Special Co-Cooking Discount Badge -->
+            <div class="p-5 rounded-2xl bg-gradient-to-r from-amber-50 to-orange-50 border border-orange-200/80 shadow-sm mt-6">
+              <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-brand-coral text-white flex items-center justify-center shrink-0 shadow-sm">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-800 text-sm sm:text-base">Совместное участие и скидка</h4>
+                  <p class="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
+                    Возможна приятная скидка на участие при содействии в совместном приготовлении еды (кулинарные традиции и теплая объединяющая атмосфера для желающих).
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Image with Floating Card -->
+          <div class="lg:col-span-6 relative">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+              <img src="https://i.postimg.cc/wMN7kxXc/176383808.jpg" 
+                   alt="Уютный домашний стол и вкусная еда" 
+                   class="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700"
+                   onerror="this.src='https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80'">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+              
+              <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-white/95 backdrop-blur-md shadow-lg text-slate-800 flex items-center justify-between">
+                <div>
+                  <p class="font-extrabold text-sm sm:text-base text-slate-900">Полный пансион (FB)</p>
+                  <p class="text-xs text-slate-500">Завтрак, сытный обед и теплый семейный ужин</p>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 bg-brand-indigo/10 text-brand-indigo rounded-full shrink-0">
+                  Включено
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="faq" class="py-20 md:py-28 bg-brand-snow border-t border-slate-200/60">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-indigo bg-indigo-50 px-3 py-1 rounded-full mb-3">
+            Вопросы и детали
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Часто задаваемые вопросы
+          </h2>
+          <p class="mt-4 text-slate-600 text-base sm:text-lg">
+            Всё, что важно знать о логистике, программе для детей и стоимости горнолыжного отдыха в Яхорине.
+          </p>
+        </div>
+
+        <!-- Accordion Container -->
+        <div class="space-y-4" id="faq-container">
+          
+          <!-- Item 1: How to get there -->
+          <div class="faq-item rounded-2xl bg-white border border-slate-200 shadow-sm transition-all duration-200">
+            <button type="button" class="faq-button w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-bold text-base sm:text-lg text-slate-800 hover:text-brand-indigo focus:outline-none" aria-expanded="false">
+              <span>Как добраться до лагеря?</span>
+              <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon text-slate-500">
+                <svg class="w-4 h-4 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="faq-answer px-6 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed hidden">
+              <p>
+                Самый быстрый путь — <strong>самолетом до Сараево</strong> (регулярные рейсы через Белград, Стамбул и европейские хабы). Из аэропорта Сараево мы организуем комфортный групповой или индивидуальный трансфер до отеля (оплачивается дополнительно).
+              </p>
+              <p class="mt-2.5">
+                Также удобно приехать <strong>на машине из Европы или Сербии</strong>: дорога из Европы идет через Хорватию по скоростной платной автомагистрали до погранперехода Баня-Лука с Боснией, и далее по современной скоростной трассе прямо до Сараево и Яхорины.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2: Program for kids & parents -->
+          <div class="faq-item rounded-2xl bg-white border border-slate-200 shadow-sm transition-all duration-200">
+            <button type="button" class="faq-button w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-bold text-base sm:text-lg text-slate-800 hover:text-brand-indigo focus:outline-none" aria-expanded="false">
+              <span>Какая программа лагеря для детей и родителей?</span>
+              <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon text-slate-500">
+                <svg class="w-4 h-4 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="faq-answer px-6 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed hidden">
+              <p>
+                <strong>Основная вечерняя программа уже входит в стоимость:</strong> она начинается в 16:30. До ужина ребят ждут творческие мастер-классы, командные квесты и снежные игры. После ужина — общее семейное событие (спектакль, шоу талантов, квиз). После детского отбоя — взрослые посиделки у камина с настольными играми, разговорами и гитарой.
+              </p>
+              <p class="mt-2.5">
+                <strong>Дополнительно утром:</strong> с 9:30–10:00 до 12:30–13:00 ведущие могут забрать детей (отвести на склон к инструкторам, поиграть на горке или провести время в зале при плохой погоде), пока родители спокойно катаются по трассам курорта. Это утреннее сопровождение оплачивается по запросу дополнительно. Обучение катанию с сертифицированным инструктором не входит в базовую стоимость.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3: Ski pass & gear prices -->
+          <div class="faq-item rounded-2xl bg-white border border-slate-200 shadow-sm transition-all duration-200">
+            <button type="button" class="faq-button w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-bold text-base sm:text-lg text-slate-800 hover:text-brand-indigo focus:outline-none" aria-expanded="false">
+              <span>Ски-пасс, прокат оборудования и инструкторы: сколько это стоит?</span>
+              <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon text-slate-500">
+                <svg class="w-4 h-4 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="faq-answer px-6 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed hidden">
+              <p>
+                Цены в Яхорине значительно доступнее Альп:
+              </p>
+              <ul class="list-disc pl-5 mt-2 space-y-1.5">
+                <li><strong>Ски-пассы:</strong> актуальные официальные тарифы на сезон и удобная онлайн-покупка со скидкой доступны на официальном сайте курорта Яхорина (<a href="https://www.oc-jahorina.com" target="_blank" rel="noopener noreferrer" class="text-brand-indigo underline hover:text-brand-coral transition-colors">www.oc-jahorina.com</a>).</li>
+                <li><strong>Прокат:</strong> комплект (лыжи/сноуборд + ботинки + палки + шлем) прямо в отеле ориентировочно от €10–15 в день для детей и €15–20 для взрослых.</li>
+                <li><strong>Обучение:</strong> групповые занятия с инструктором (4 человека в группе) — от €18 в час с человека, индивидуальные тренировки — от €40 в час. Мы поможем заранее забронировать инструкторов.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Item 4: Weather in February -->
+          <div class="faq-item rounded-2xl bg-white border border-slate-200 shadow-sm transition-all duration-200">
+            <button type="button" class="faq-button w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-bold text-base sm:text-lg text-slate-800 hover:text-brand-indigo focus:outline-none" aria-expanded="false">
+              <span>Какая погода на Яхорине в феврале?</span>
+              <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center shrink-0 transition-transform duration-300 faq-icon text-slate-500">
+                <svg class="w-4 h-4 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="faq-answer px-6 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed hidden">
+              <p>
+                Февраль — золотой сезон и пик снежного покрова в Боснии. Средняя толщина снега достигает 100–140 см, работают все трассы курорта. 
+              </p>
+              <p class="mt-2">
+                Температура мягкая и комфортная: днем около -2...-5°C, много солнечных дней. Склоны защищены хвойными лесами от сильных ветров, что делает катание детей максимально приятным и безопасным.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-azure-dark bg-sky-50 px-3 py-1 rounded-full mb-3">
+            Яркие моменты
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Атмосфера наших выездов
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-600">
+            Снежные вершины, семейные вечера, детские триумфы на лыжах и новые друзья.
+          </p>
+        </div>
+
+        <!-- 9 Responsive Grid Photos with Hover Effects -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Photo 1 -->
+          <div class="group relative rounded-2xl overflow-hidden shadow-soft-card h-64 bg-slate-800">
+            <img src="https://i.postimg.cc/Z5NzKBTr/p1.jpg" 
+                 alt="Яркие моменты выезда 1" 
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                 onerror="this.src='https://placehold.co/700x500/1e293b/ffffff?text=PHOTO+1'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <span class="text-white text-xs font-semibold">Снежные склоны и солнце</span>
+            </div>
+          </div>
+
+          <!-- Photo 2 -->
+          <div class="group relative rounded-2xl overflow-hidden shadow-soft-card h-64 bg-slate-800">
+            <img src="https://i.postimg.cc/t46GCZX3/p2.jpg" 
+                 alt="Яркие моменты выезда 2" 
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                 onerror="this.src='https://placehold.co/700x500/1e293b/ffffff?text=PHOTO+2'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <span class="text-white text-xs font-semibold">Игры и радость на снегу</span>
+            </div>
+          </div>
+
+          <!-- Photo 3 -->
+          <div class="group relative rounded-2xl overflow-hidden shadow-soft-card h-64 bg-slate-800">
+            <img src="https://i.postimg.cc/cJW2xFkd/p3.jpg" 
+                 alt="Яркие моменты выезда 3" 
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                 onerror="this.src='https://placehold.co/700x500/1e293b/ffffff?text=PHOTO+3'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <span class="text-white text-xs font-semibold">Первые спуски</span>
+            </div>
+          </div>
+
+          <!-- Photo 4 -->
+          <div class="group relative rounded-2xl overflow-hidden shadow-soft-card h-64 bg-slate-800">
+            <img src="https://i.postimg.cc/9f2KmLgF/p4.jpg" 
+                 alt="Яркие моменты выезда 4" 
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                 onerror="this.src='https://placehold.co/700x500/1e293b/ffffff?text=PHOTO+4'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <span class="text-white text-xs font-semibold">Семейные прогулки</span>
+            </div>
+          </div>
+
+          <!-- Photo 5 -->
+          <div class="group relative rounded-2xl overflow-hidden shadow-soft-card h-64 bg-slate-800">
+            <img src="https://i.postimg.cc/FKv8rTCz/p5.jpg" 
+                 alt="Яркие моменты выезда 5" 
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                 onerror="this.src='https://placehold.co/700x500/1e293b/ffffff?text=PHOTO+5'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <span class="text-white text-xs font-semibold">Уютные вечера вместе</span>
+            </div>
+          </div>
+
+          <!-- Photo 6 -->
+          <div class="group relative rounded-2xl overflow-hidden shadow-soft-card h-64 bg-slate-800">
+            <img src="https://i.postimg.cc/vmykY02Y/p6.jpg" 
+                 alt="Яркие моменты выезда 6" 
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                 onerror="this.src='https://placehold.co/700x500/1e293b/ffffff?text=PHOTO+6'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <span class="text-white text-xs font-semibold">Настоящая дружба</span>
+            </div>
+          </div>
+
+          <!-- Photo 7 -->
+          <div class="group relative rounded-2xl overflow-hidden shadow-soft-card h-64 bg-slate-800">
+            <img src="https://i.postimg.cc/8CG9pZX7/p7.jpg" 
+                 alt="Яркие моменты выезда 7" 
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                 onerror="this.src='https://placehold.co/700x500/1e293b/ffffff?text=PHOTO+7'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <span class="text-white text-xs font-semibold">Творчество и мастер-классы</span>
+            </div>
+          </div>
+
+          <!-- Photo 8 (p9 URL provided) -->
+          <div class="group relative rounded-2xl overflow-hidden shadow-soft-card h-64 bg-slate-800">
+            <img src="https://i.postimg.cc/rpT3VfZd/p9.jpg" 
+                 alt="Яркие моменты выезда 8" 
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                 onerror="this.src='https://placehold.co/700x500/1e293b/ffffff?text=PHOTO+8'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <span class="text-white text-xs font-semibold">Улыбки и эмоции смены</span>
+            </div>
+          </div>
+
+          <!-- Photo 9 (p8 URL provided) -->
+          <div class="group relative rounded-2xl overflow-hidden shadow-soft-card h-64 bg-slate-800">
+            <img src="https://i.postimg.cc/XvWmjs1X/p8.jpg" 
+                 alt="Яркие моменты выезда 9" 
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                 onerror="this.src='https://placehold.co/700x500/1e293b/ffffff?text=PHOTO+9'">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <span class="text-white text-xs font-semibold">Теплая атмосфера Яхорины</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="booking" class="py-20 md:py-28 bg-gradient-to-b from-brand-snow to-slate-100 relative overflow-hidden">
+      <!-- Background accent glow circles -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-indigo/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="p-8 sm:p-14 rounded-3xl bg-white border border-slate-200/90 shadow-2xl">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100 text-brand-coral font-bold text-xs uppercase tracking-wide mb-6">
+            Ограниченный набор участников
+          </div>
+
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Присоединяйтесь к нашей теплой компании в Яхорине
+          </h2>
+
+          <p class="mt-6 text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+            Количество мест строго ограничено номерным фондом гостевого дома (всего 10 номеров). После заполнения анкеты организатор свяжется с вами в течение суток и пришлет индивидуальный расчет стоимости для вашей семьи.
+          </p>
+
+          <!-- Main Pulsing CTA Button -->
+          <div class="mt-8 flex justify-center">
+            <a href="https://forms.gle/jGzSs5m5NUqApjhK8" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="pulse-btn inline-flex items-center justify-center px-10 py-5 rounded-full text-lg sm:text-xl font-bold text-white bg-brand-coral hover:bg-brand-coral-hover shadow-glow-coral transition-all duration-300">
+              Заполнить анкету участника
+              <svg class="w-6 h-6 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Helper card reminder -->
+          <div class="mt-8 pt-8 border-t border-slate-100 text-xs sm:text-sm text-slate-500 max-w-lg mx-auto">
+            <p>
+              Остались вопросы перед заполнением? Напишите нам в 
+              <a href="https://www.instagram.com/familycampcyprus/" target="_blank" rel="noopener noreferrer" class="text-brand-indigo font-bold underline hover:text-brand-coral transition-colors">Instagram @familycampcyprus</a> 
+              или укажите вопрос в анкете — мы подробно на все ответим.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex justify-center pb-8 border-b border-slate-800">
+        <!-- Social link centered -->
+        <div>
+          <a href="https://www.instagram.com/familycampcyprus/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="inline-flex items-center gap-2 text-slate-300 hover:text-white transition-colors text-sm font-medium">
+            <svg class="w-5 h-5 text-rose-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            <span>Instagram: @familycampcyprus</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-6 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 gap-3 text-center md:text-left">
+        <p>© 2027 Family Camp. Зимний семейный выезд в Яхорину (Босния).</p>
+        <p class="max-w-md">Не является публичной офертой. Все детали программы и размещения уточняются организатором при подтверждении заявки.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <div id="mobile-floating-cta" class="fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 px-4 py-3 sm:hidden transform translate-y-full transition-transform duration-300 shadow-2xl">
+    <div class="flex items-center justify-between gap-3">
+      <div>
+        <p class="text-xs font-bold text-slate-900">7–14 февраля 2027</p>
+        <p class="text-[11px] text-slate-500">Осталось 10 номеров</p>
+      </div>
+      <a href="https://forms.gle/jGzSs5m5NUqApjhK8" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-bold text-white bg-brand-coral hover:bg-brand-coral-hover shadow-md">
+        Заполнить анкету
+        <svg class="w-3.5 h-3.5 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      // 1. Mobile Hamburger Menu Toggle
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', function () {
+          const isExpanded = mobileMenu.classList.contains('hidden');
+          if (isExpanded) {
+            mobileMenu.classList.remove('hidden');
+          } else {
+            mobileMenu.classList.add('hidden');
+          }
+        });
+
+        // Close menu on link click
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+          });
+        });
+      }
+
+      // 2. Interactive FAQ Accordion Logic
+      const faqButtons = document.querySelectorAll('.faq-button');
+
+      faqButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const currentItem = this.closest('.faq-item');
+          const answer = currentItem.querySelector('.faq-answer');
+          const icon = currentItem.querySelector('.faq-icon svg');
+          const isCurrentlyOpen = !answer.classList.contains('hidden');
+
+          // Close all FAQ items
+          document.querySelectorAll('.faq-item').forEach(item => {
+            const itemAnswer = item.querySelector('.faq-answer');
+            const itemIcon = item.querySelector('.faq-icon svg');
+            itemAnswer.classList.add('hidden');
+            if (itemIcon) itemIcon.classList.remove('rotate-180');
+            item.querySelector('.faq-button').setAttribute('aria-expanded', 'false');
+          });
+
+          // If was closed, open current
+          if (!isCurrentlyOpen) {
+            answer.classList.remove('hidden');
+            if (icon) icon.classList.add('rotate-180');
+            this.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // 3. Floating CTA on Mobile & Header Scroll Shadow
+      const heroSection = document.getElementById('hero');
+      const floatingCta = document.getElementById('mobile-floating-cta');
+      const header = document.getElementById('site-header');
+
+      window.addEventListener('scroll', function () {
+        // Sticky Header styling on scroll
+        if (window.scrollY > 40) {
+          header.classList.add('shadow-sm');
+        } else {
+          header.classList.remove('shadow-sm');
+        }
+
+        // Show mobile floating CTA after hero
+        if (heroSection && floatingCta) {
+          const heroBottom = heroSection.getBoundingClientRect().bottom;
+          if (heroBottom < 100) {
+            floatingCta.classList.remove('translate-y-full');
+          } else {
+            floatingCta.classList.add('translate-y-full');
+          }
+        }
+      });
+
+    });
+  </script>
+</body>
+</html>
